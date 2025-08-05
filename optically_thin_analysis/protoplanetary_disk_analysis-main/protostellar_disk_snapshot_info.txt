@@ -1,0 +1,25 @@
+Protostellar disk formation simulations comparing the effects of assuming ideal vs. non-ideal 
+(Ohmic resistivity, ambipolar diffusion, and the Hall effect) magnetohydrodynamics, sub-grid
+protostellar jet feedback, on disk formation and evolution.
+
+Initial conditions: 50 solar mass molecular cloud core, R = 0.3077 pc (box size = 3.077 pc),
+mass resolution dm = 1e-5 Msun/particle (~5 million PartType0 gas particles).
+
+Included models:
+  - non-ideal OA: non-ideal MHD (Ohmic+ambipolar), no jet feedback.
+    - forms one sink particle (996106), one disk (most massive disk out of all models).
+  - non-ideal OAH: non-ideal MHD (Ohmic+ambipolar+Hall), no jet feedback.
+    - forms 4 sink particles, which become two binary systems, (701553, 3182263) and
+      (1873423, 1714272).
+  - non-ideal OAH+jets: non-ideal MHD (ohmic+ambipolar+Hall), sub-grid protostellar jet
+    feed-back (see STARFORGE methods paper if interested).
+      - forms 10 sink particles, some short-lived disks at early times are quickly 
+        disrupted by jet feedback; long-lived binary disk (sink particles 1984874, 
+        2001958) emerges at later times.
+        
+Other notes:
+  - PartType5 particle = sink particle = (proto)star.
+  - disk hdf5 files contain list of all ParticleIDs of all gas particles belonging to
+    a disk in the corresponding simulation snapshot; may be helpful if you want to 
+    look at disk properties (e.g., average temperature, density, etc - see Disk class
+    in protostellar_disk_analysis github repo for details).
