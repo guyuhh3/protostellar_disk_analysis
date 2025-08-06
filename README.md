@@ -42,8 +42,10 @@ Example script used to write input files and run radmc-3d at three different inc
     Example script for running radmc3d and writing fits files if you already have input files. 
     * **radmc3d_overwrite.py**
     Functions to write/overwrite dust_density.inp, stars.inp, gas_temperature.inp, and dust_temperature.inp.
-    
 
 
 * *gizmo_carver-main*
     * Copied from soffner's repository, access details at the following link.  https://github.com/soffner/gizmo_carver
+
+* *inputs+radmc-3d_tutorial.ipynb*
+   * Jupyter notebook tutorial with code on how to write input files for radmc-3d and then run radmc-3d.
